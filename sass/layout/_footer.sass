@@ -1,0 +1,33 @@
+.footer
+  background-color: $col-light-green
+  padding: 6.4rem 3.9rem 8rem
+  position: relative
+  text-align: center
+  height: 35rem
+  @media screen and (min-width: 768px)
+    padding: 7.2rem 0
+  &__logo
+    margin-bottom: 4rem
+    width: 17rem
+  &__links
+    display: flex
+    justify-content: center
+    gap: 5.7rem
+    margin-bottom: 8.9rem
+    & a
+      color: $col-dark-green
+      font-family: $font-text
+      font-size: 1.8rem
+      letter-spacing: -0.13px
+      transition: $transition
+      &:hover
+        color: $col-white
+  &__social
+    display: flex
+    justify-content: center
+    gap: 2.8rem
+    & a
+      transition: $transition
+      &:hover
+        filter: brightness(0) invert(1)
+        transform: scale(1.2)

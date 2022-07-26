@@ -1,0 +1,28 @@
+.gallery
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-template-rows: repeat(2, 18.8rem)
+  @media screen and (min-width: 768px)
+    grid-template-rows: repeat(2, 22.3rem)
+  @media screen and (min-width: 992px)
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: 44.7rem
+  &__img
+    background-size: cover
+    background-position: center
+    &--milkbottles
+      background-image: url(../images/mobile/image-gallery-milkbottles.jpg)
+      @media screen and (min-width: 768px)
+        background-image: url(../images/desktop/image-gallery-milkbottles.jpg)
+    &--orange
+      background-image: url(../images/mobile/image-gallery-orange.jpg)
+      @media screen and (min-width: 768px)
+        background-image: url(../images/desktop/image-gallery-orange.jpg)
+    &--cone
+      background-image: url(../images/mobile/image-gallery-cone.jpg)
+      @media screen and (min-width: 768px)
+        background-image: url(../images/desktop/image-gallery-cone.jpg)
+    &--sugar-cubes
+      background-image: url(../images/mobile/image-gallery-sugar-cubes.jpg)
+      @media screen and (min-width: 768px)
+        background-image: url(../images/desktop/image-gallery-sugar-cubes.jpg)

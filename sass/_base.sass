@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap')
+
+// Font family
+$font-heading: 'Fraunces', serif
+$font-text: 'Barlow', sans-serif
+
+// Spacing
+$space-max-width: 110rem
+
+// Design elements
+$transition: 250ms ease-in-out
+
+// Visibility
+@media screen and (max-width: 767px)
+  .hide-for-mobile
+    display: none
+  
+@media screen and (min-width: 768px)
+  .hide-for-desktop
+    display: none
+
+
+// Reset
+html
+  box-sizing: border-box
+  font-size: 62.5%
+  scroll-behavior: smooth
+  height: 100%
+
+*, *::before, *::after
+  box-sizing: border-box
+
+body
+  background-color: $col-white-bg
+  margin: 0
+  overflow-x: hidden
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+a
+  color: inherit
+  text-decoration: none
+
+input, textarea
+  background: none
+  border: none
+  display: block
+  margin: 0
+  padding: 0
+
+textarea
+  resize: none
+
+label
+  display: block
+
+button
+  border: none
+  cursor: pointer
+  outline: none

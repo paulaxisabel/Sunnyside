@@ -1,0 +1,122 @@
+.header
+  background-color: $col-blue
+  background-image: url(../images/mobile/image-header.jpg)
+  background-size: cover
+  background-position: bottom
+  background-repeat: no-repeat
+  color: $col-white
+  position: relative
+  height: 53.8rem
+  @media screen and (min-width: 600px)
+    background-image: url(../images/desktop/image-header.jpg)
+    background-size: 144rem
+    background-position-y: 0
+    background-attachment: fixed
+    height: 80rem
+  &__logo
+    width: 17rem
+  &__nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 3.2rem 2.4rem 0
+    @media screen and (min-width: 768px)
+      padding: 3.4rem 4.8rem 0 4rem
+      margin: 0 auto
+      max-width: 144rem
+  &__links
+    font-family: $font-text
+    font-size: 1.8rem
+    align-items: center
+    gap: 3.2rem
+    z-index: 1
+    &.open
+      clip-path: circle(100% at 70% 50%)
+    @media screen and (max-width: 767px)
+      display: flex
+      clip-path: circle(0% at 100% 0%)
+      transition: 450ms ease clip-path
+      color: $col-grey
+      background-color: $col-white-bg
+      flex-direction: column
+      padding: 3.9rem 0
+      position: absolute
+      top: 10.6rem
+      height: 30.5rem
+      width: calc(100% - 4.8rem)
+      &::before
+        content: ''
+        position: absolute
+        width: 0
+        height: 0
+        top: -2.5rem
+        right: 0
+        border-style: solid
+        border-width: 0 0 2.5rem 2.5rem
+        border-color: transparent transparent $col-white-bg transparent
+    @media screen and (min-width: 768px)
+      flex-direction: row
+      letter-spacing: -0.13px
+      display: flex
+      align-items: center
+      gap: 4.7rem
+
+    & a
+      transition: $transition color
+      &:hover
+        @media screen and (min-width: 768px)
+          color: #b9e9ff
+
+      &:last-of-type
+        background-color: $col-yellow
+        border-radius: 2.8rem
+        color: $col-black
+        display: inline
+        font-family: $font-heading
+        font-weight: bold
+        font-size: 1.5rem
+        letter-spacing: -0.11px
+        text-transform: uppercase
+        transition: $transition
+        padding: 1.9rem 3.1rem 1.8rem
+        &:hover
+          background-color: $col-light-yellow
+        @media screen and (min-width: 768px)
+          background-color: $col-white
+          &:hover
+            color: $col-white
+            background-color: $col-light-blue
+  &__hamburger
+    cursor: pointer
+    width: 2.4rem
+    @media screen and (min-width: 768px)
+      display: none
+    &:before,
+    &:after,
+    & div
+      background: $col-white
+      content: ''
+      display: block
+      height: 0.2rem
+      margin: 0.6rem 0
+      transition: 0.35s
+    &.open::before
+      transform: translateY(1rem) rotate(135deg)
+    &.open::after
+      transform: translateY(-0.6rem) rotate(-135deg)
+    &.open div
+      transform: scale(0)
+
+  &__arrow
+    position: absolute
+    top: 29.4rem
+    left: 50%
+    transform: translateX(-50%)
+    @media screen and (min-width: 768px)
+      top: 35.7rem
+      
+  & h1
+    margin-top: 8.8rem
+    text-align: center
+    @media screen and (min-width: 768px)
+      margin-top: 10.5rem

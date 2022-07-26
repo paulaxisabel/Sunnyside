@@ -1,0 +1,83 @@
+.features
+  display: grid
+  @media screen and (min-width: 768px)
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(3, 60rem)
+  &__text
+    display: flex
+    flex-direction: column
+    text-align: center
+    padding: 6.4rem 2.4rem
+    min-height: 43.7rem
+    @media screen and (min-width: 768px)
+      justify-content: start
+      padding: 15.8rem 2.4rem 0
+      text-align: left
+      height: 100%
+    &--transform
+      @media screen and (min-width: 768px)
+        grid-row-start: 1
+      & div
+        @media screen and (min-width: 1200px)
+          margin-left: auto
+          margin-right: 8.1rem
+    &--stand-out
+      & div
+        @media screen and (min-width: 1200px)
+          margin-left: 8.6rem
+    &-wrapper
+      @media screen and (min-width: 768px)
+        max-width: 45rem
+    & h2
+      @media screen and (max-width: 768px)
+        margin: 0 auto
+        max-width: 32.7rem
+    & p
+      margin: 2.4rem 0 3.5rem
+      @media screen and (min-width: 768px)
+        margin: 0 0 4.3rem
+
+  &__img
+    background-position: center
+    background-size: cover
+    height: 31.2rem
+    width: 100%
+    @media screen and (min-width: 768px)
+      height: 100%
+    &--transform
+      background-image: url(../images/mobile/image-transform.jpg)
+      @media screen and (min-width: 768px)
+        background-image: url(../images/desktop/image-transform.jpg)
+        grid-column-start: 2
+    &--stand-out
+      background-image: url(../images/mobile/image-stand-out.jpg)
+      @media screen and (min-width: 768px)
+        background-image: url(../images/desktop/image-stand-out.jpg)
+        
+  &__img-text
+    background-size: cover
+    background-position-x: center
+    display: flex
+    align-items: flex-end
+    text-align: center
+    padding: 0 2.4rem 4.4rem
+    min-height: 60rem
+    width: 100%
+    @media screen and (min-width: 1800px)
+      background-position-y: -4rem
+    &--graphic-design
+      background-image: url(../images/desktop/image-graphic-design.jpg)
+      & h3, p
+        color: #24554A
+    &--photography
+      background-image: url(../images/desktop/image-photography.jpg)
+      & h3, p
+        color: #19536C
+    & p
+      font-size: 1.6rem
+      line-height: 2.7rem
+    & div
+      margin: 0 auto
+      max-width: 33.9rem
+
+      
